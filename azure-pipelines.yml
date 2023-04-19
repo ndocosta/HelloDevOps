@@ -19,7 +19,6 @@ steps:
   inputs:
     command: 'install'
 
-
 - script: |
    gulp clean
    gulp set-manifest-version --buildnum "$(Build.BuildNumber)" --format "3.{0}.{1}{2}.{3}"
@@ -30,6 +29,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
+    SourceFolder: '$(build.SourcesDirectory)/sharepoint/solution'
     Contents: '**\*.sppkg'
     TargetFolder: '$(build.artifactstagingdirectory)/drop'
 
