@@ -8,7 +8,7 @@ export interface IHelloDevOpsWebPartProps {
 
 export default class HelloDevOpsWebPart extends BaseClientSideWebPart<IHelloDevOpsWebPartProps> {
   public render(): void {
-    this.domElement.innerHTML = `<div class="${ styles.helloDevOps }"></div>`;
+    this.domElement.innerHTML = `<div class="${ styles.helloDevOps }"><h1>Hello World of Dev Ops</h1></div>`;
   }
 
   protected onInit(): Promise<void> {
