@@ -15,27 +15,26 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+- task: Npm@1
+  inputs:
+    command: 'install'
+
+
 - script: |
    gulp clean
+   gulp set-manifest-version --buildnum "$(Build.BuildNumber)" --format "3.{0}.{1}{2}.{3}"
    gulp bundle --ship
    gulp package-solution --ship
    dir
   displayName: 'Build and Package Solution'
 
-- task: Npm@1
+- task: CopyFiles@2
   inputs:
-    command: 'install'
+    Contents: '**\*.sppkg'
+    TargetFolder: '$(build.artifactstagingdirectory)/drop'
 
-- task: gulp@0
-  displayName: 'Set Manifest Version'
+- task: PublishBuildArtifacts@1
   inputs:
-    targets: 'set-manifest-version'
-    gulpFile: $(ProjectFolder)/gulpfile.js
-    arguments: '--buildnum "$(Build.BuildNumber)" --format "3.{0}.{1}{2}.{3}"'
-
-- task: gulp@0
-  displayName: 'Bundle project'
-  inputs:
-    targets: bundle
-    arguments: '--ship'
-
+    PathtoPublish: '$(build.artifactstagingdirectory)/drop'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
