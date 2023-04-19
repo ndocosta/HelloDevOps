@@ -15,6 +15,13 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+- script: |
+   gulp clean
+   gulp bundle --ship
+   gulp package-solution --ship
+   dir
+  displayName: 'Build and Package Solution'
+
 - task: Npm@1
   inputs:
     command: 'install'
