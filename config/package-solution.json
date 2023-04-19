@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "hello-dev-ops-client-side-solution",
+    "id": "8944163d-3334-46e8-a5c1-08a01c207fde",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.16.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "HelloDevOps description"
+      },
+      "longDescription": {
+        "default": "HelloDevOps description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "hello-dev-ops Feature",
+        "description": "The feature that activates elements of the hello-dev-ops solution.",
+        "id": "9d0b6cc8-d963-4117-bf47-81b925a77454",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/hello-dev-ops.sppkg"
+  }
+}

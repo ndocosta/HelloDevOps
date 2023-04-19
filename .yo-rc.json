@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "14.21.3",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.4.1"
+    },
+    "version": "1.16.1",
+    "libraryName": "hello-dev-ops",
+    "libraryId": "8944163d-3334-46e8-a5c1-08a01c207fde",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "HelloDevOps",
+    "solutionShortDescription": "HelloDevOps description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
