@@ -23,8 +23,7 @@ steps:
   displayName: 'Set Manifest Version'
   inputs:
     targets: 'set-manifest-version'
-    gulpFile: |
-      gulpfile.js
+    gulpFile: 'gulpfile.js'
     arguments: '--buildnum "$(Build.BuildNumber)" --format "3.{0}.{1}{2}.{3}"'
 
 - task: gulp@0
