@@ -31,7 +31,7 @@ steps:
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(build.SourcesDirectory)/sharepoint/solution'
-    Contents: '**\*.sppkg'
+    Contents: 'hello-dev-ops.sppkg'
     TargetFolder: '$(build.artifactstagingdirectory)/drop'
 
 - task: PublishBuildArtifacts@1
